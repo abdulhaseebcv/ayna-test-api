@@ -21,12 +21,14 @@ module.exports = {
     const socketIO = require('socket.io');
 
     // Initialize socket.io server
-    const io = require('socket.io')(strapi.server.httpServer, {
+    const io = socketIO(strapi.server.httpServer, {
       cors: {
-        origin: "https://ayna-test.onrender.com",
+        origin: ["http://localhost:3000", "https://ayna-test.onrender.com"],
+        methods: ["GET", "POST"],
+        allowedHeaders: ["Content-Type"],
       },
-    });
-
+    });    
+    
     // Handle a new connection
     io.on('connection', (socket) => {
       console.log('User connected:', socket.id);
