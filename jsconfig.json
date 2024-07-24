@@ -1,0 +1,17 @@
+// {
+//   "compilerOptions": {
+//     "moduleResolution": "nodenext",
+//     "target": "es6",
+//     "checkJs": true,
+//     "allowJs": true
+//   }
+// }
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "strict": true
+  }
+}
